@@ -13,6 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { HttpClientModule } from '@angular/common/http';
+//import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -42,6 +43,7 @@ import { BookComponent } from './components/book/book.component';
     MatListModule,
     MatToolbarModule,
     HttpClientModule,
+   // MdbCarouselModule
 
   ],
   providers: [],

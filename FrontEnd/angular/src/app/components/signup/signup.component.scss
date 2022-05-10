@@ -1,15 +1,37 @@
-mat-form-field {
-    width: 70%;
-   
+.img{
+  
+    height:30em; background-size:cover; width:30em;
+    background-image:url('https://img.freepik.com/free-vector/flat-hotel-review-background_23-2148157029.jpg?t=st=1652205980~exp=1652206580~hmac=fac15c075582359e92a580cba81af055804a4fafc3bf67bb429c1729027f6d8b&w=740');
+    //background-position:50% 50%;
+    float:right;
+    margin-top:-5%;
+    margin-left: -75%;
+  
+}
+form{
+  width:150%;
+  height:150%;
+  
+  flex-direction: column;
+ // display:flex;
+ margin-left:20%;
+}
+mat-form-field{
+    width: 70%;    
     font-family:"sans-serif";
     font-size:120%;
+    float:center;
+
+  }
+  .signup{
+    
+    height:80%;
+    width:40%;
+  }
+  button {
+    float: center;
+    width: 150px;
+    margin-left:2%;
 
   }
   
-  button {
-    float: right;
-    width: 150px;
-    margin-left:80%;
-
-  }
-

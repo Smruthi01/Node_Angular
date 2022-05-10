@@ -15,7 +15,11 @@ if(ExistingUser){
     .json({message:"Email id already taken"}) 
 
 }
-      const newUser = new User({fullName,email,password});
+
+//const hashedPassword = await bcrypt.hash(password, 12);
+
+
+      const newUser = new User({fullName,email,password });
       const savedUser = await newUser.save().catch((err)=>{
           console.log(err);
           res.status(500).json({error: "Cannot register user at the moment!" })
