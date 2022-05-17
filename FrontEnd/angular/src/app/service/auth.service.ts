@@ -12,9 +12,9 @@ export class AuthService {
   private url_reg="http://localhost:8080/api/register" ;
   private url_log="http://localhost:8080/api/login" ;
 
-  
+
   isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
-  //id: Pick<User, "id">;
+  id: Pick<User, "id">;
   
   httpOptions:{headers: HttpHeaders}={
     headers: new HttpHeaders({"Content-Type": "application/json"}),
@@ -30,7 +30,39 @@ export class AuthService {
     );
   }
 
-  
+login(
+  email: Pick<User, "email">,
+  password: Pick<User, "password">,
+
+): Observable<{
+  token: string
+  id: Pick<User, "id">;
+}> {
+  return this.http
+    .post(this.url_log, { email, password }, this.httpOptions)
+    .pipe(
+      first(Object),
+      tap((tokenObject:  { token: string; id: Pick<User, "id"> }) => {
+        this.id = tokenObject.id;
+        localStorage.setItem("token", tokenObject.token);
+        this.isUserLoggedIn$.next(true);
+        this.router.navigate(["book"]);
+      }),
+      catchError(
+        this.errorHandlerService.handleError<{
+          token: string;
+          id: Pick<User, "id">;
+        }>("login")
+      )
+    );
+}
+ }
+
+
+
+
+// { token: string; id: Pick<User, "id"> }
+
 //   login(email:Pick<User,"email">,password:Pick<User,"password">): Observable<
 //   {token:string;id:Pick<User,"id">;
 // }>{
@@ -44,33 +76,3 @@ export class AuthService {
 
 //     );
 //   }
-
-
-// login(
-//   email: Pick<User, "email">,
-//   password: Pick<User, "password">,
-
-// ): Observable<{
-//   token: string
-//   id: Pick<User, "id">;
-// }> {
-//   return this.http
-//     .post(this.url_log, { email, password }, this.httpOptions)
-//     .pipe(
-//       first(Object),
-//       tap((tokenObject: any) => {
-//         this.id = tokenObject.id;
-//         localStorage.setItem("token", tokenObject.token);
-//         this.isUserLoggedIn$.next(true);
-//         this.router.navigate(["book"]);
-//       }),
-//       catchError(
-//         this.errorHandlerService.handleError<{
-//           token: string;
-//           id: Pick<User, "id">;
-//         }>("login")
-//       )
-//     );
-// }
- }
-// { token: string; id: Pick<User, "id"> }

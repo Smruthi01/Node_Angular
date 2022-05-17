@@ -1,0 +1,109 @@
+[
+    {
+        "id":1,
+        "name":"Chennai"
+    },
+    
+    {
+        "id":2,
+        "name":"Bangalore"
+    },
+    
+    {
+        "id":3,
+        "name":"Hyderabad"
+    },
+    
+    {
+        
+            "id":4,
+            "name":"Delhi"
+        },
+        {
+        "id":5
+,        "name":"Mumbai"
+    },
+    
+    {
+        "id":6,
+        "name":"Kolkata"
+    },
+    
+    {
+        "id":7,
+        "name":"Vijayawada"
+    },
+    
+    {
+        "id":8,
+        "name":"Jaipur"
+    },
+    
+    {
+        "id":9,
+        "name":"Goa"
+    },
+    {
+        
+        "id":10,
+        "name":"Kochi"
+    },
+    {
+        
+        "id":11,
+        "name":"Kashmir"
+    },
+    {
+        
+        "id":12,
+        "name":"Manali"
+    },
+    {
+        
+        "id":13,
+        "name":"Udaipur"
+    },
+    {
+        
+        "id":14,
+        "name":"Shimla"
+    },
+    {
+        
+        "id":15,
+        "name":"Hampi"
+    },
+    {
+        
+        "id":16,
+        "name":"Munnar"
+    },
+
+    {
+        
+        "id":17,
+        "name":"Agra"
+    },
+    {
+        
+        "id":18,
+        "name":"Nainital"
+    },
+    {
+        
+        "id":19,
+        "name":"Ooty"
+    },
+    {
+        
+        "id":20,
+        "name":"Mysore"
+    },
+    {
+        
+        "id":21,
+        "name":"Jaisalmar"
+    }
+   
+]
+

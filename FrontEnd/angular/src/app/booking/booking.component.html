@@ -1,0 +1,30 @@
+<p>booking works!</p>
+<img src="https://img.freepik.com/free-vector/room-reservation-online-customer-support-consultation-virtual-reception-office_335657-2488.jpg?w=826" alt="book2">
+
+<h2>Book Now
+<br>Get FLAT 25% Off !!!</h2>
+
+
+<div class="container">
+  
+    <form [formGroup]="formGroup">
+      <mat-form-field>
+        <mat-label>
+        Location
+        </mat-label>
+        <input formControlName="location" matInput type="text" [matAutocomplete]="auto" />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let item of filteredOptions" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-autocomplete>
+<!-- 
+        <input matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker> -->
+      </mat-form-field>
+    </form>
+  
+</div>
+<!-- //testing team,refresh token basic error shldnot be there  authguard -->
+<!-- nearby places guide , transportation,specoal packages, compare -->

@@ -30,8 +30,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login(){
-    console.log()
+  login():void{
+    console.log("login");
+    this.authService.login(this.loginForm.value.email,this.loginForm.value.password).subscribe()
   }
 
 }
