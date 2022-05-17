@@ -13,7 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { HttpClientModule } from '@angular/common/http';
-//import { AngularModule } from './shared/modules/angular/angular.module';
+import { SharedModule } from './shared/modules/shared.module'; 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -22,22 +22,23 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewComponent } from './components/view/view.component';
 import { SignupModule } from './components/signup/signup.module';
-import { BookingComponent } from './booking/booking.component';
-
+import { HomeModule } from './components/home/home.module';
+import { LoginModule } from './components/login/login.module';
+import { BookingModule } from './components/booking/booking/booking.module';
+//import { ClipboardModule } from 'ngx-clipboard';
+//import { AngularModule } from './shared/modules/angular/angular.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    SignupComponent,
-    LoginComponent,
-    HomeComponent,
+    NavigationComponent,    
     ViewComponent,
-    BookingComponent
   ],
   imports: [
     MatAutocompleteModule,
     FormsModule,
-    //AngularModule,
+    SharedModule,
+//    ClipboardModule,
+  SignupModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -49,7 +50,9 @@ import { BookingComponent } from './booking/booking.component';
     MatListModule,
     MatToolbarModule,
     HttpClientModule,
-    SignupModule
+    HomeModule,
+    LoginModule,
+    BookingModule
   ],
  
   providers: [],

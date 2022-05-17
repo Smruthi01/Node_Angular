@@ -26,11 +26,17 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatSnackBarModule,MatDatepickerModule,MatIconModule,
     MatFormFieldModule,MatButtonModule,MatDividerModule,MatGridListModule,
     MatCardModule,MatInputModule,MatToolbarModule,
-    MatDatepickerInput
+  
 
   ]
   ,
-  exports:[CommonModule,MatDialogModule,MatSelectModule,MatAutocompleteModule,MatNativeDateModule,MatIconModule,MatDatepickerModule,MatFormFieldModule,MatButtonModule,MatDividerModule,MatGridListModule,MatCardModule,MatInputModule,MatToolbarModule]
+  exports:[CommonModule,
+    MatDialogModule,
+    MatSelectModule,MatAutocompleteModule,
+    MatNativeDateModule,MatIconModule,
+    MatDatepickerModule,MatFormFieldModule,MatButtonModule,
+    MatDividerModule,MatGridListModule,MatCardModule,
+    MatInputModule,MatToolbarModule]
 
 })
 export class AngularModule { }

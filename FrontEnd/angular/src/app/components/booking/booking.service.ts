@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book } from '../models/book';
+import { Book } from 'src/app/models/book';
 import {HttpClient} from '@angular/common/http';
 import {map, skipWhile, tap} from 'rxjs/operators'
 import { Router } from '@angular/router';
