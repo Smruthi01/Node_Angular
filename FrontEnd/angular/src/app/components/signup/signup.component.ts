@@ -6,7 +6,7 @@ import { AuthService } from "src/app/service/auth.service";
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
-  styleUrls: ["./signup.component.scss"],
+  styleUrls: ["./signup.component.scss"], 
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
   //constructor(private fb: FormBuilder){}
   constructor(private authService : AuthService , private router: Router){}
   createFormGroup(): FormGroup {
-    return new FormGroup({
+    return new FormGroup({ 
       fullName: new FormControl("", [Validators.required, Validators.minLength(2)]),
       email: new FormControl("", [Validators.required, Validators.email]),
       password: new FormControl("", [

@@ -50,6 +50,9 @@ const sequelize = require('../database/server');
   updatedAt: {
      
         type: DataTypes.DATE,
+    },
+    h_image:{
+      type:DataTypes.BLOB
     }
     });
 

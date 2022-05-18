@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookingComponent } from '../booking.component';
 import { AngularModule } from 'src/app/shared/modules/angular/angular.module';
 import { BookingRoutingModule } from '../booking-routing.module';
-//import { ClipboardModule } from 'ngx-clipboard';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { BookingRoutingModule } from '../booking-routing.module';
     MatInputModule,
     MatAutocompleteModule,
     AngularModule,
-    //ClipboardModule,
+    ClipboardModule,
     BookingRoutingModule
     
   ],

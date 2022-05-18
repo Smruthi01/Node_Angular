@@ -1,0 +1,54 @@
+<h2>Welcome admin !</h2>
+<!-- [formGroup]="adminForm" (ngSubmit) = "addHotel()"  -->
+<div>
+ <form [formGroup]="adminForm" novalidate (ngSubmit) = "addHotel()">
+    <div class="form"> 
+    <mat-form-field>
+        <mat-label>Hotel Name</mat-label>
+        <input matInput  type="text" placeholder="Enter Hotel name" formControlName="fullName">
+    </mat-form-field>  <br> 
+  
+    <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input matInput type="text" placeholder="Enter Hotel Address" formControlName="location">
+    </mat-form-field>  <br> 
+
+ 
+
+    <mat-form-field>
+        <mat-label>Number Of Rooms</mat-label>
+        <input matInput type="number" placeholder="Enter Total Rooms" formControlName="rooms">
+    </mat-form-field>  <br> 
+    <mat-form-field>
+        <mat-label>Speciality</mat-label>
+        <input matInput  type="text" placeholder="Family/Tourist/Staycation/Couple friendly" formControlName="speciality">
+    </mat-form-field>  <br> 
+    <mat-form-field>
+        <mat-label>Double Beds Rooms</mat-label>
+        <input matInput type="number" placeholder="Number of Double Beds" formControlName="double_beds">
+    </mat-form-field>  <br> 
+    
+    <mat-form-field>
+        <mat-label>Price for Double Beds</mat-label>
+        <input matInput type="number" placeholder="Price for Double Beds" formControlName="price_double">
+    </mat-form-field>  <br> 
+    <mat-form-field>
+        <mat-label>Four Beds Rooms</mat-label>
+        <input matInput type="number" placeholder="Number of Four Beds" formControlName="four_beds">
+    </mat-form-field>  <br> 
+    
+    <mat-form-field>
+        <mat-label>Price for Four Beds</mat-label>
+        <input matInput type="number" placeholder="Price for Four Beds" formControlName="price_four">
+    </mat-form-field>  <br> 
+   <label>Hotel Image</label><br>
+   <input type="file"[placeholder]="" formControlName=""h_image>
+</div> 
+    <button  color="primary"  mat-raised-button type="submit">
+        <span>Add</span>
+    </button>
+   
+   
+
+
+

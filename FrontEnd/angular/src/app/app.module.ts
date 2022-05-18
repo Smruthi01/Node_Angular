@@ -25,20 +25,24 @@ import { SignupModule } from './components/signup/signup.module';
 import { HomeModule } from './components/home/home.module';
 import { LoginModule } from './components/login/login.module';
 import { BookingModule } from './components/booking/booking/booking.module';
-//import { ClipboardModule } from 'ngx-clipboard';
+import { ClipboardModule } from 'ngx-clipboard';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminModule } from './components/admin/admin.module';
 //import { AngularModule } from './shared/modules/angular/angular.module';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,    
     ViewComponent,
+
   ],
   imports: [
     MatAutocompleteModule,
     FormsModule,
     SharedModule,
-//    ClipboardModule,
+    ClipboardModule,
   SignupModule,
+  AdminModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -51,8 +55,9 @@ import { BookingModule } from './components/booking/booking/booking.module';
     MatToolbarModule,
     HttpClientModule,
     HomeModule,
-    LoginModule,
-    BookingModule
+   LoginModule,
+    BookingModule,
+    AppRoutingModule
   ],
  
   providers: [],

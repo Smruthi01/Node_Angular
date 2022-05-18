@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup ,Validators} from '@angular/forms';
 import { BookingService } from './booking.service';
 import { AuthService } from "src/app/service/auth.service";
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
@@ -28,6 +29,14 @@ export class BookingComponent implements OnInit {
   
   }
 
+  createFormGroup(): FormGroup {
+    return new FormGroup({
+      location: new FormControl("", ),
+      from: new FormControl("" ),
+      to: new FormControl(""),
+    });
+  }
+
   initForm() {
     this.formGroup = this.fb.group({
       'location' : ['']
@@ -48,7 +57,7 @@ filterData(enteredData) {
     return item.toLowerCase().indexOf(enteredData.toLowerCase()) > -1
   })
    
-  }
+  } 
   getNames(){
     this.service.getData().subscribe(response => {
       this.options = response;
@@ -56,12 +65,12 @@ filterData(enteredData) {
     })
   }
   
-  // book(): void {
-  //   this.service.book(this.formGroup.value).subscribe((msg) => {
-  //     console.log(msg);
-  //     this.router.navigate(["book"]);
-  //   });
-  // }
+  book(): void {
+    // this.service.book(this.formGroup.value).subscribe((msg) => {
+    //   console.log(msg);
+    //   this.router.navigate(["book"]);
+    // });
+  }
 
 
 }

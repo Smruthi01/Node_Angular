@@ -20,6 +20,10 @@ export class BookingService {
       )
       }
 
+      book(): void{
+    
+      }
+
   // book() : Observable<any>{
     
   //   return this.http.post<Book>(this.url_book,book,this.httpOptions).pipe(

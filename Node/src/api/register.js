@@ -25,8 +25,11 @@ if(ExistingUser){
           res.status(500).json({error: "Cannot register user at the moment!" })
       });
 
-      if(savedUser)
+      if(savedUser){
+        
       res.json({message:"thanks for registering"})
+      console.log(res);
+      }
 
 });
 

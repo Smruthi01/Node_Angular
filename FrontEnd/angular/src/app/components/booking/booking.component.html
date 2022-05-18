@@ -5,16 +5,17 @@
 <h2>Book Now &</h2><br>
 <h2>Get FLAT 25% Off !!!</h2>
 
-<!-- <button ngxClipboard [cbContent]="'25OFF'">Copy!</button> -->
+
 </div>
+<button mat-raised-button  color="indigo" id="offer" ngxClipboard [cbContent]="'25OFF'">Click Here</button> 
 <!-- <h2>Book Now
 <br>Get FLAT 25% Off !!!</h2> -->
 
 
-<div class="container">
+<div id="container">
   
-    <form [formGroup]="formGroup">
-      <mat-form-field>
+    <form [formGroup]="formGroup" (ngSubmit) = "book()">
+      <mat-form-field id="book1">
         <mat-label>
         Location
         </mat-label>
@@ -24,10 +25,25 @@
             {{item}}
           </mat-option>
         </mat-autocomplete>
-<!-- 
+      </mat-form-field>
+      
+      <mat-form-field id="book2"> 
+        <mat-label>
+          From
+          </mat-label>
         <input matInput [matDatepicker]="myDatePicker">
-        <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
-        <mat-datepicker #myDatePicker></mat-datepicker> -->
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker> 
+      </mat-form-field>
+      <mat-form-field id="book3">
+        <mat-label>
+          To
+          </mat-label>
+        <input matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker> 
+
+        <button mat-raised-button color="accent">Search</button>
       </mat-form-field>
     </form>
   

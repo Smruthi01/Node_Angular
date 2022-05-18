@@ -11,5 +11,5 @@ router.post('/view/location=?',async(req,res)=>{
       res.json(search)
 })
 
-module.eports=router;
+module.exports=router;
 
