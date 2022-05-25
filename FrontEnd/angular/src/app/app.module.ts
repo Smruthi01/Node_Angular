@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/modules/shared.module'; 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NavigationComponent } from './components/navigation/navigation.component';
+//import { NavigationComponent } from './components/nav/navigation.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -28,11 +28,13 @@ import { BookingModule } from './components/booking/booking/booking.module';
 import { ClipboardModule } from 'ngx-clipboard';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminModule } from './components/admin/admin.module';
+//import { NavbarModule } from './modules/navbar/navbar/navbar.module';
+import { NavbarComponent } from './modules/navbar/navbar/navbar.component';
 //import { AngularModule } from './shared/modules/angular/angular.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,    
+   NavbarComponent,    
     ViewComponent,
 
   ],
@@ -57,7 +59,8 @@ import { AdminModule } from './components/admin/admin.module';
     HomeModule,
    LoginModule,
     BookingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //NavbarModule
   ],
  
   providers: [],
