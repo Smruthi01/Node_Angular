@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt');
 const sequelize = require('sequelize')
 const router = express.Router();
 router.post('/login',async(req,res)=>{
-    const{email }=req.body;
-    var password = req.body;
-    upassword = toString(password)
+    const email =req.body.email;
+    var password = req.body.password;
+   // upassword = toString(password)
     console.log(req.body);
 
     const ad_email ="admin.mystay@gmail.com";
@@ -33,7 +33,7 @@ router.post('/login',async(req,res)=>{
         
             //const storedUser = user[0][0];
         
-           // const isEqual = await bcrypt.compare(password, storedUser);
+           // const isEqual = await bcrypt.compare(password, storedUser.password);
         
             // if (!isEqual) {
             //   const error = new Error('Wrong password!');
@@ -41,18 +41,25 @@ router.post('/login',async(req,res)=>{
             //   throw error;
             // }
             
- const userEmail= await User.findAll({where:{email},raw:true}).catch(
+ const userEmail= await User.findOne({where:{email},raw:true}).catch(
     (err)=>{
         console.log(err);
     }
        );
     
-       console.log(res)
-       console.log(userEmail)
+       console.log("here",userEmail)
+       console.log(userEmail.password)
               if(!userEmail)
     return res
     .status(404)
     .json({message:"Email or password does not match!"})
+
+      const isEqual = await bcrypt.compare(password,userEmail.password );
+        console.log(isEqual)
+    
+    if (isEqual) {
+  
+        console.log("not equal")
 
             const jwtToken =jwt.sign(
                 {id:userEmail.id,email:userEmail.email},
@@ -64,9 +71,11 @@ router.post('/login',async(req,res)=>{
             //       err.statusCode = 500;
             //     }
                 
+              }else{
+                  res.send("invalid password")
               }
         
-        
+            }
   
 
 //const dbpassword = User.sequelize.query("SELECT password FROM users WHERE email LIKE ?",{email},{ type: sequelize.QueryTypes.SELECT })
@@ -74,12 +83,7 @@ router.post('/login',async(req,res)=>{
 
 
 
-    // const isEqual = await bcrypt.compare(givenPassword,dbpassword );
-    //     console.log(isEqual)
-
-    // if (userEmail.password!=password) {
   
-    //     console.log("not equal")
     // }else if
 
 //    if(==password){

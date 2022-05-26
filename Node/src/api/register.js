@@ -16,7 +16,7 @@ if(ExistingUser){
 
 }
 
-const hashedPassword = await bcrypt.hash(password, 12);
+const hashedpassword = await bcrypt.hash(password, 12);
 
 const data = {
     fullName:fullName,
