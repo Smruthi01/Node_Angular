@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require("../models/user")
-
+const bcrypt = require('bcrypt')
 const router = express.Router();
 
 router.post('/register',async(req,res)=>{
@@ -16,10 +16,14 @@ if(ExistingUser){
 
 }
 
-//const hashedPassword = await bcrypt.hash(password, 12);
+const hashedPassword = await bcrypt.hash(password, 12);
 
-
-      const newUser = new User({fullName,email,password });
+const data = {
+    fullName:fullName,
+    email:email,
+    password:hashedpassword
+}
+      const newUser = new User(data);
       const savedUser = await newUser.save().catch((err)=>{
           console.log(err);
           res.status(500).json({error: "Cannot register user at the moment!" })

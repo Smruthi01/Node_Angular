@@ -27,4 +27,19 @@ router.post('/admin/addhotel',async(req,res)=>{
 
 })
 
+router.post('/admin/delete',async(req,res)=>{
+    const delname = req.body.delname;
+    await Hotels.destroy({where:{name:delname}})
+    .then(
+        res.json({ message:"hotel deleted" })
+
+    )
+    .catch((err)=>{
+        console.log(err);
+        res.status(500).json({error: "Cannot delete hotel" })
+
+})
+})
+
+
 module.exports = router;
