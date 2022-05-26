@@ -11,15 +11,16 @@ router.get('/admin/allhotels',async(req,res)=>{
 });
 
 router.post('/admin/addhotel',async(req,res)=>{
-    const  {name,location,ratings,rooms,speciality,price_double,price_four,four_beds,double_beds,avaailability,offers,img} = req.body;
-
+    const name = req.body.name;
+    const  {location,ratings,rooms,speciality,price_double,price_four,four_beds,double_beds,avaailability,offers,img} = req.body;
+console.log(req.body)
     const newHotel = new Hotels({name,location,ratings,rooms,speciality,price_double,price_four,four_beds,double_beds,avaailability,offers,img});
     const addedHotel = await newHotel.save().catch((err)=>{
-        console.log(err);
+        console.log("hotel add",addedHotel);
         res.status(500).json({error: "Cannot add hotel at the moment!" })
     })
 
-    if(addedHotel){
+    if(addedHotel!=0){
         
         res.json({message:"Hotel added"})
         console.log(res);

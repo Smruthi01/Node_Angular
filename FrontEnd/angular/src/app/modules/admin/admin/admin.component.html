@@ -1,54 +1,75 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h2>Welcome admin !</h2>
 <!-- [formGroup]="adminForm" (ngSubmit) = "addHotel()"  -->
+<div class="main">
 <div>
- <form [formGroup]="adminForm" novalidate (ngSubmit) = "addHotel()">
-    <div class="form"> 
-    <mat-form-field>
-        <mat-label>Hotel Name</mat-label>
+ <form  novalidate (ngSubmit)= "addHotel()">
+    <div class="form1">
+       <h3>Add New Hotel</h3>
+        <label>Hotel Name</label><br>
         <input matInput  type="text" placeholder="Enter Hotel name" formControlName="fullName">
-    </mat-form-field>  <br> 
+     <br> 
   
-    <mat-form-field>
-        <mat-label>Location</mat-label>
+    
+        <label>Location</label><br>
         <input matInput type="text" placeholder="Enter Hotel Address" formControlName="location">
-    </mat-form-field>  <br> 
+    <br> 
 
- 
-
-    <mat-form-field>
-        <mat-label>Number Of Rooms</mat-label>
+        <label>Number Of Rooms</label><br>
         <input matInput type="number" placeholder="Enter Total Rooms" formControlName="rooms">
-    </mat-form-field>  <br> 
-    <mat-form-field>
-        <mat-label>Speciality</mat-label>
+     <br> 
+  
+        <label>Speciality</label><br>
         <input matInput  type="text" placeholder="Family/Tourist/Staycation/Couple friendly" formControlName="speciality">
-    </mat-form-field>  <br> 
-    <mat-form-field>
-        <mat-label>Double Beds Rooms</mat-label>
+   <br> 
+  
+        <label>Double Beds Rooms</label><br>
         <input matInput type="number" placeholder="Number of Double Beds" formControlName="double_beds">
-    </mat-form-field>  <br> 
+  <br> 
     
-    <mat-form-field>
-        <mat-label>Price for Double Beds</mat-label>
+ 
+        <label>Price for Double Beds</label><br>
         <input matInput type="number" placeholder="Price for Double Beds" formControlName="price_double">
-    </mat-form-field>  <br> 
-    <mat-form-field>
-        <mat-label>Four Beds Rooms</mat-label>
+   <br> 
+  
+        <label>Four Beds Rooms</label><br>
         <input matInput type="number" placeholder="Number of Four Beds" formControlName="four_beds">
-    </mat-form-field>  <br> 
-    
-    <mat-form-field>
-        <mat-label>Price for Four Beds</mat-label>
+  <br> 
+ 
+        <label>Price for Four Beds</label><br>
         <input matInput type="number" placeholder="Price for Four Beds" formControlName="price_four">
-    </mat-form-field>  <br> 
+   <br> 
    <label>Hotel Image</label><br>
    <input type="file"[placeholder]="" formControlName=""h_image>
-</div> 
+ <br>
     <button  color="primary"  mat-raised-button type="submit">
         <span>Add</span>
     </button>
-   
-   
+    
+</div>
+</form>
+
+    <form class="form2">
+        <h3>Delete Hotel</h3>
+        <label>Hotel Name</label><br>
+        <input matInput  type="text" placeholder="Enter name of Hotel to be deleted" formControlName="delname">
+     <br> 
+
+     <button  color="red"   mat-raised-button type="submit">
+        <span>Delete</span>
+    </button>
+</form>
+    </div>
+
+
+    <form class="form3">
+        <h3>Edit Hotel</h3>
+
+
+    </form>
+</div>
+
+
 
 
 

@@ -1,0 +1,56 @@
+
+.bookform{
+    display: grid;
+      margin-top: 3%;
+     // float: left;
+      color: black;
+      grid-gap: 16px;
+    //padding: 10px 0;
+   // margin: 10px auto;
+    
+    flex-wrap: wrap;
+    //gap: 16px;
+      
+  
+  }
+  img{
+      margin: 0;
+      width: 70%;
+      flex: left;
+      margin-top: -8%;
+      margin-left:-5%;
+  }
+  #text{
+      
+      color: #FF4081;
+      float: right;
+      margin: -2%;
+      margin-top: 5%;
+      flex:right;
+      font-size:30px;
+  }
+  #offer{
+      background-color: rgb(104, 14, 168);
+      color: white;
+      float: right;
+      margin: -3%;
+      margin-top: 15%;
+      flex:right;
+      font-size:20px;
+      margin-right: -20%;
+      border-radius: 8px;
+      width: 150px;
+  
+      // width: 6px;
+       height: 50px;
+  }
+  h2{
+      color: #FF4081;
+      float: right;
+      margin: -2%;
+      margin-top: 5%;
+      flex:right;
+      font-size:30px;
+  
+  }
+  

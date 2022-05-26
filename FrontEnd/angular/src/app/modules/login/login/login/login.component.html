@@ -1,0 +1,26 @@
+<!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Ffrequentindia.com%2Flogin.php&psig=AOvVaw1U4cNmOXIdbWDauV045k7b&ust=1653575426421000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIiS19fu-vcCFQAAAAAdAAAAABAZ -->
+<img src="https://img.freepik.com/free-vector/online-booking-services-abstract-concept-illustration_335657-3908.jpg?size=338&ext=jpg&ga=GA1.2.906122043.1652205284" alt="img">
+<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="" formControlName="email" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      type="password"
+      placeholder=""
+      formControlName="password"
+    />
+  </mat-form-field>
+
+  <button
+    color="accent"
+    mat-raised-button
+    type="submit"
+  >
+    <span>Log in</span>
+  </button>
+</form>
+

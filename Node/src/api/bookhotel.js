@@ -28,4 +28,40 @@ if (speciality=="all"){
  }
  
  })
+
+
+ //from the hotels list
+router.post('/list',async(req,res)=>{
+  const id = req.body.id;
+
+  const fetch = await Hotels.findOne(({where:{id:id}}))
+  .catch(
+    (err) => {console.log("Error: ", err);}
+
+  );
+  res.json(fetch)
+  
+})
+
+router.post('/hotelbook/name=?',async(req,res)=>{
+  
+  const from = req.body.from;
+  const to = req.body.to;
+  const name = req.body.name;
+  var room = req.body.room;
+  var days = req.body.days;
+  
+  const id = req.body.id;
+  var bill =0;
+  var price = 0;
+  const bookeduser = req.body.user;
+  console.log(days)
+var fourprice=0  ; 
+  
+
+})
+    
+
+
+
 module.exports = router;

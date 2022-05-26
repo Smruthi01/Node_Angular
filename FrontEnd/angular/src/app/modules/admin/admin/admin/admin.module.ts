@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminRoutingModule } from './admin-routing.module';
-import { AdminComponent } from './admin.component';
 
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminComponent } from '../admin.component';
 import { AngularModule } from 'src/app/shared/modules/angular/angular.module';
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminRoutingModule,
     AngularModule,
     ReactiveFormsModule
-  ],
-  exports:[
-  AdminComponent
-      ]
+  ]
 })
 export class AdminModule { }

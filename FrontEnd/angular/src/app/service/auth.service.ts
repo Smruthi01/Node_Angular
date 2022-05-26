@@ -38,6 +38,7 @@ login(
   token: string
   id: Pick<User, "id">;
 }> {
+  
   return this.http
     .post(this.url_log, { email, password }, this.httpOptions)
     .pipe(
@@ -46,6 +47,7 @@ login(
         this.id = tokenObject.id;
         localStorage.setItem("token", tokenObject.token);
         this.isUserLoggedIn$.next(true);
+     
         this.router.navigate(["book"]);
       }),
       catchError(

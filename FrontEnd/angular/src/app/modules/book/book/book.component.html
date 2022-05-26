@@ -1,0 +1,57 @@
+<p>booking works!</p>
+<img src="https://img.freepik.com/free-vector/room-reservation-online-customer-support-consultation-virtual-reception-office_335657-2488.jpg?w=826" alt="book2">
+<div id="text">
+  
+<h2>Book Now &</h2><br>
+<h2>Get FLAT 25% Off !!!</h2>
+
+
+</div>
+<button mat-raised-button  color="indigo" id="offer" ngxClipboard [cbContent]="'25OFF'">Click Here</button>
+
+
+    <div class="bookform"  (ngSubmit) = "Onsubmit()">
+        <form [formGroup]="bookform" >
+
+            <mat-form-field id="book1">
+                <mat-icon matPrefix></mat-icon>
+                <mat-label>
+                Location
+                </mat-label>
+                <input formControlName="location" matInput type="text" [matAutocomplete]="auto" />
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let item of filteredOptions" [value]="item">
+                    {{item}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+              
+      <!-- <mat-form-field appearance="outline" class="date-field">
+        <mat-label>Enter a date range of stay</mat-label>
+        <mat-date-range-input  [min]="minDate" [rangePicker]="picker">
+          <input matStartDate  placeholder="Check-in" required formControlName="fromDate">
+          <input matEndDate   placeholder="Check-out" required formControlName="toDate">
+      
+        </mat-date-range-input >
+         <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+        <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>  -->
+
+      <label>Category</label>
+      <select class="custom-select" (change)="changeCity($event)" formControlName="speciality">
+        <option value="">Choose your category</option>
+        <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
+      </select> 
+      <label>Category</label>
+      <select name="my-select" [(ngModel)]="mySelect" (change)="selectChange()">
+        <option [value]="item.id" *ngFor="let item of search">
+            {{item.category}}
+        </option>
+    </select>
+  
+
+        </form>
+    </div>
+

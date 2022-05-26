@@ -9,6 +9,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookingService {
+  getDropDownText(mySelect: string, data: { name: string; id: string; }[]) {
+    throw new Error('Method not implemented.');
+  }
 
   private url_book="http://localhost:8080/api/book" ;
 

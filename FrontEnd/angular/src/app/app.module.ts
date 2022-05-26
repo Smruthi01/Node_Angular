@@ -17,25 +17,26 @@ import { SharedModule } from './shared/modules/shared.module';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 //import { NavigationComponent } from './components/nav/navigation.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './modules/signup/signup.component';
+import { LoginComponent } from './modules/login/login/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { ViewComponent } from './components/view/view.component';
-import { SignupModule } from './components/signup/signup.module';
+import { ViewComponent } from './modules/view/view.component';
+import { SignupModule } from './modules/signup/signup.module';
 import { HomeModule } from './components/home/home.module';
-import { LoginModule } from './components/login/login.module';
+import { LoginModule } from './modules/login/login/login/login.module';
 import { BookingModule } from './components/booking/booking/booking.module';
 import { ClipboardModule } from 'ngx-clipboard';
-import { AdminComponent } from './components/admin/admin.component';
-import { AdminModule } from './components/admin/admin.module';
+
+import { AdminModule } from './modules/admin/admin/admin/admin.module';
 //import { NavbarModule } from './modules/navbar/navbar/navbar.module';
 import { NavbarComponent } from './modules/navbar/navbar/navbar.component';
+import { BookComponent } from './modules/book/book/book.component';
 //import { AngularModule } from './shared/modules/angular/angular.module';
 @NgModule({
   declarations: [
     AppComponent,
    NavbarComponent,    
-    ViewComponent,
+    ViewComponent, BookComponent,
 
   ],
   imports: [
@@ -55,7 +56,7 @@ import { NavbarComponent } from './modules/navbar/navbar/navbar.component';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
-    HttpClientModule,
+    HttpClientModule, 
     HomeModule,
    LoginModule,
     BookingModule,
